@@ -1,5 +1,7 @@
 return {
   ensure_installed = {
-    "clangd"
+    "clangd",
+    "prettier",
+    "typescript-language-server",
   },
 }
