@@ -1,11 +1,12 @@
 local options = {
-  lsp_fallback = true,
+	lsp_fallback = true,
 
-  formatters_by_ft = {
-    lua = { "stylua" },
-    javascript = { "prettier" },
-    typescript = { "prettier" },
-  },
+	formatters_by_ft = {
+		lua = { "stylua" },
+		javascript = { "prettier" },
+		typescript = { "prettier" },
+		python = { "isort", "black" },
+	},
 }
 
 require("conform").setup(options)
