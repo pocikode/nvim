@@ -6,6 +6,7 @@ local options = {
 		javascript = { "prettier" },
 		typescript = { "prettier" },
 		python = { "isort", "black" },
+    c = { "clang_format" },
 	},
 }
 
