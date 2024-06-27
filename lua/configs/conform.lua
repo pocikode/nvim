@@ -7,6 +7,7 @@ local options = {
 		typescript = { "prettier" },
 		python = { "isort", "black" },
     c = { "clang_format" },
+    go = { "goimports", "gofmt" },
 	},
 }
 
