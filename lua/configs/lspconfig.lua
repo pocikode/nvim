@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 vim.lsp.inlay_hint.enable(true)
 
 -- setup language servers
-local servers = { "clangd", "gopls" }
+local servers = { "clangd", "gopls", "pyright", "ruff", "ruff-lsp" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers
@@ -62,6 +62,17 @@ vim.lsp.config("gopls", {
       staticcheck = true,
       directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
       semanticTokens = true,
+    },
+  },
+})
+
+vim.lsp.config("ruff", {
+  settings = {
+    cmd_env = { RUFF_TRACE = "messages" },
+    init_options = {
+      settings = {
+        logLevel = "error",
+      },
     },
   },
 })
