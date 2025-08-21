@@ -2,6 +2,7 @@ local options = {
   formatters_by_ft = {
     c = { "clang-format" },
     cpp = { "clang-format" },
+    go = { "goimports", "gofumpt" },
     lua = { "stylua" },
   },
 
