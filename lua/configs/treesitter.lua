@@ -1,0 +1,26 @@
+local options = {
+  ensure_installed = {
+    "bash",
+    "c",
+    "cpp",
+    "css",
+    "dockerfile",
+    "html",
+    "json",
+    "lua",
+    "make",
+    "markdown",
+    "vim",
+    "vimdoc",
+    "yaml",
+  },
+
+  highlight = {
+    enable = true,
+    use_language_tree = true,
+  },
+
+  indent = { enable = true },
+}
+
+require("nvim-treesitter.configs").setup(options)
