@@ -4,6 +4,7 @@ local options = {
     cpp = { "clang-format" },
     go = { "goimports", "gofumpt" },
     lua = { "stylua" },
+    nix = { "nixfmt" },
   },
 
   format_on_save = {

@@ -14,6 +14,7 @@ local options = {
     "lua",
     "make",
     "markdown",
+    "nix",
     "python",
     "vim",
     "vimdoc",
