@@ -11,6 +11,7 @@ local options = {
     "gosum",
     "html",
     "json",
+    "json5",
     "lua",
     "make",
     "markdown",

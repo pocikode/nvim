@@ -1,5 +1,11 @@
 return {
   {
+    "b0o/SchemaStore.nvim",
+    lazy = true,
+    version = false,
+  },
+
+  {
     "p00f/clangd_extensions.nvim",
     lazy = true,
     opts = require "configs.clangd_extensions",
