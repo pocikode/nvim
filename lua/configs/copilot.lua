@@ -1,6 +1,4 @@
-local M = {}
-
-M.opts = {
+return {
   enabled = false,
   auto_trigger = true,
   hide_during_completion = true,
@@ -15,19 +13,3 @@ M.opts = {
     help = true,
   },
 }
-
-M.blink_opts = {
-  sources = {
-    default = { "copilot" },
-    providers = {
-      copilot = {
-        name = "copilot",
-        module = "blink-cmp-copilot",
-        score_offset = 100,
-        async = true,
-      },
-    },
-  },
-}
-
-return M

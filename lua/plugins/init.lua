@@ -49,6 +49,11 @@ return {
   },
 
   {
+    "saghen/blink.cmp",
+    opts = require "configs.blink",
+  },
+
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     opts = require "configs.conform",
