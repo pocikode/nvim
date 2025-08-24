@@ -12,9 +12,23 @@ return {
   },
 
   {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    opts = require "configs.conform",
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    opts = function()
+      dofile(vim.g.base46_cache .. "notify")
+      return require "configs.noice"
+    end,
+  },
+
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "helix",
+    },
   },
 
   {
@@ -32,5 +46,11 @@ return {
     config = function()
       require "configs.treesitter"
     end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    opts = require "configs.conform",
   },
 }
