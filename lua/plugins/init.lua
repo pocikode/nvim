@@ -1,5 +1,12 @@
 return {
   {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    config = true,
+    event = "VeryLazy",
+  },
+
+  {
     "b0o/SchemaStore.nvim",
     lazy = true,
     version = false,
@@ -26,9 +33,24 @@ return {
 
   {
     "folke/which-key.nvim",
-    opts = {
-      preset = "helix",
+    opts_extend = { "spec" },
+    opts = require "configs.whichkey",
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
     },
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = require "configs.gitsigns",
   },
 
   { import = "nvchad.blink.lazyspec" },
