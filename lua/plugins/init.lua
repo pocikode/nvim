@@ -63,8 +63,23 @@ return {
   },
 
   {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = { mode = "cursor", max_lines = 3 },
+  },
+
+  {
     "saghen/blink.cmp",
     opts = require "configs.blink",
+  },
+
+  {
+    "SmiteshP/nvim-navbuddy",
+    cmd = "Navbuddy",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+    },
+    opts = { lsp = { auto_attach = true } },
   },
 
   {
