@@ -27,3 +27,22 @@ map("v", "<leader>/", "gc", { desc = "Toggle comment", remap = true })
 -- neo tree
 map("n", "<leader>e", "<cmd>Neotree action=focus<cr>", { desc = "NeoTree Focus Window" })
 map("n", "<C-n>", "<cmd>Neotree toggle<cr>", { desc = "NeoTree Toggle Window" })
+
+-- toggle copilot
+Snacks.toggle({
+  name = "Copilot Completion",
+  color = {
+    enabled = "azure",
+    disabled = "orange",
+  },
+  get = function()
+    return not require("copilot.client").is_disabled()
+  end,
+  set = function(state)
+    if state then
+      require("copilot.command").enable()
+    else
+      require("copilot.command").disable()
+    end
+  end,
+}):map("<leader>at")
