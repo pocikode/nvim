@@ -7,6 +7,10 @@ return {
           settings = {
             gopls = {
               usePlaceholders = false,
+              analyses = {
+                ST1000 = false,
+                ST1023 = false,
+              },
             },
           },
         },
